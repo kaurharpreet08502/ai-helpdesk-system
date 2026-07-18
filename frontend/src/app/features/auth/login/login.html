@@ -1,0 +1,179 @@
+<div class="login-container">
+
+    <!-- Left Panel -->
+
+    <div class="branding-panel">
+
+        <div class="branding-content">
+
+            <mat-icon class="brand-icon">
+
+                support_agent
+
+            </mat-icon>
+
+            <h1>
+
+                Enterprise AI HelpDesk
+
+            </h1>
+
+            <h3>
+
+                Intelligent Ticket Management System
+
+            </h3>
+
+            <p>
+
+                AI Powered • Spring Boot • Angular • RAG
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- Right Panel -->
+
+    <div class="login-panel">
+
+        <mat-card class="login-card">
+
+            <h2>
+
+                Welcome Back
+
+            </h2>
+
+            <p class="subtitle">
+
+                Sign in to continue
+
+            </p>
+<form
+
+[formGroup]="loginForm"
+
+(ngSubmit)="onSubmit()">
+            <mat-form-field
+                appearance="outline"
+                class="full-width">
+
+                <mat-label>Email Address</mat-label>
+
+               <input
+    matInput
+    type="email"
+    formControlName="email">
+
+                <mat-icon matSuffix>
+
+                    mail
+
+                </mat-icon>
+                <mat-error
+    *ngIf="formControls['email'].hasError('required')">
+
+    Email is required
+
+</mat-error>
+
+<mat-error
+    *ngIf="formControls['email'].hasError('email')">
+
+    Enter a valid email
+
+</mat-error>
+
+            </mat-form-field>
+
+            <mat-form-field
+                appearance="outline"
+                class="full-width">
+
+                <mat-label>Password</mat-label>
+
+              <input
+
+matInput
+
+[type]="hidePassword ? 'password':'text'"
+
+formControlName="password">
+
+                <button
+                    mat-icon-button
+                    matSuffix
+                    type="button"
+                    (click)="togglePassword()">
+
+                    <mat-icon>
+
+                        {{ hidePassword ? 'visibility_off' : 'visibility' }}
+
+                    </mat-icon>
+                    <mat-error
+*ngIf="formControls['password'].hasError('required')">
+
+Password is required
+
+</mat-error>
+
+<mat-error
+*ngIf="formControls['password'].hasError('minlength')">
+
+Minimum 8 characters
+
+</mat-error>
+
+                </button>
+
+            </mat-form-field>
+
+            <div class="options">
+<mat-checkbox
+
+formControlName="rememberMe">
+
+Remember Me
+
+</mat-checkbox>
+
+                <a routerLink="/forgot-password">
+
+                    Forgot Password?
+
+                </a>
+
+            </div>
+
+            <button
+
+mat-raised-button
+
+color="primary"
+
+type="submit"
+
+class="login-button"
+
+[disabled]="loading">
+
+{{ loading ? 'Signing In...' : 'Login' }}
+
+</button>
+
+            </form>
+
+            <div class="footer">
+
+                Version 1.0.0
+
+            </div>
+
+        </mat-card>
+
+    </div>
+
+</div>

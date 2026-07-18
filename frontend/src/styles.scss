@@ -1,0 +1,79 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+/* ================================
+   Global Reset
+================================ */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================================
+   HTML
+================================ */
+
+html,
+body {
+  height: 100%;
+}
+
+/* ================================
+   Body
+================================ */
+
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background: #f5f7fa;
+  color: #1f2937;
+}
+
+/* ================================
+   Utility
+================================ */
+
+.container {
+  width: 95%;
+  margin: auto;
+}
+
+.page-title {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+/* ================================
+   Material Cards
+================================ */
+
+.mat-mdc-card {
+  border-radius: 12px !important;
+}
+
+/* ================================
+   Material Buttons
+================================ */
+
+.mat-mdc-raised-button {
+  border-radius: 8px !important;
+}

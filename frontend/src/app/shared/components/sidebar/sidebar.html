@@ -1,0 +1,47 @@
+<div class="sidebar-container">
+
+    <div class="sidebar-header">
+
+        <mat-icon>
+
+            support_agent
+
+        </mat-icon>
+
+        <span>
+
+            AI HelpDesk
+
+        </span>
+
+    </div>
+
+    <mat-nav-list>
+
+        <a
+
+            mat-list-item
+
+            *ngFor="let item of filteredNavigation"
+
+            [routerLink]="item.route"
+
+            routerLinkActive="active-link">
+
+            <mat-icon matListItemIcon>
+
+                {{item.icon}}
+
+            </mat-icon>
+
+            <span matListItemTitle>
+
+                {{item.title}}
+
+            </span>
+
+        </a>
+
+    </mat-nav-list>
+
+</div>

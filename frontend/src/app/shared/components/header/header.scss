@@ -1,0 +1,57 @@
+.toolbar {
+
+    height: 64px;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+}
+
+.logo {
+
+    margin-left: 12px;
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+}
+
+.spacer {
+
+    flex: 1;
+
+}
+
+.search-box {
+
+    width: 320px;
+
+    margin-right: 20px;
+
+}
+
+.search-box ::ng-deep .mat-mdc-form-field-subscript-wrapper {
+
+    display: none;
+
+}
+
+@media(max-width:768px){
+
+.search-box{
+
+    display:none;
+
+}
+
+.logo{
+
+    font-size:16px;
+
+}
+
+}

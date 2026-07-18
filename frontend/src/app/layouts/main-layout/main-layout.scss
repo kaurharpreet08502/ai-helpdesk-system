@@ -1,0 +1,59 @@
+.layout-container {
+
+    height: 100vh;
+
+    background: #f5f7fa;
+
+}
+
+.sidebar {
+
+    width: 260px;
+
+    border-right: none;
+
+    background: white;
+
+    box-shadow: 0 0 12px rgba(0,0,0,.08);
+
+}
+
+.page-content {
+
+    min-height: calc(100vh - 128px);
+
+    padding: 24px;
+
+    background: #f5f7fa;
+
+}
+
+mat-sidenav-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+app-footer{
+
+    margin-top:auto;
+
+}
+
+@media(max-width:991px){
+
+.sidebar{
+
+    width:240px;
+
+}
+
+.page-content{
+
+    padding:16px;
+
+}
+
+}

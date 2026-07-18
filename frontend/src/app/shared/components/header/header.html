@@ -1,0 +1,74 @@
+<mat-toolbar color="primary" class="toolbar">
+
+    <button
+        mat-icon-button
+        (click)="toggleSidebar()">
+
+        <mat-icon>menu</mat-icon>
+
+    </button>
+
+    <span class="logo">
+
+        Enterprise AI HelpDesk
+
+    </span>
+
+    <span class="spacer"></span>
+
+    <mat-form-field
+        appearance="outline"
+        class="search-box">
+
+        <input
+            matInput
+            placeholder="Search">
+
+    </mat-form-field>
+
+    <button
+        mat-icon-button
+        matBadge="{{notificationCount}}"
+        matBadgeColor="warn">
+
+        <mat-icon>
+
+            notifications
+
+        </mat-icon>
+
+    </button>
+
+    <button
+        mat-button
+        [matMenuTriggerFor]="profileMenu">
+
+        <mat-icon>
+
+            account_circle
+
+        </mat-icon>
+
+        {{currentUser.name}}
+
+    </button>
+
+    <mat-menu #profileMenu="matMenu">
+
+        <button mat-menu-item>
+
+            Profile
+
+        </button>
+
+        <button
+            mat-menu-item
+            (click)="logout()">
+
+            Logout
+
+        </button>
+
+    </mat-menu>
+
+</mat-toolbar>
