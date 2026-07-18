@@ -1,4 +1,9 @@
 package com.harpreet.aihelpdesk.enums;
 
-public class FileStorageType {
+public enum FileStorageType {
+
+    LOCAL,
+
+    S3
+
 }

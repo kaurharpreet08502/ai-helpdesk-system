@@ -1,4 +1,11 @@
 package com.harpreet.aihelpdesk.enums;
 
-public class NotificationType {
+public enum NotificationType {
+
+    EMAIL,
+
+    IN_APP,
+
+    SYSTEM
+
 }

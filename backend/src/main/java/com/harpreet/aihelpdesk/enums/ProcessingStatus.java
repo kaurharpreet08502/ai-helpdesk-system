@@ -1,4 +1,14 @@
 package com.harpreet.aihelpdesk.enums;
+public enum ProcessingStatus {
 
-public class ProcessingStatus {
+    PENDING,
+
+    PROCESSING,
+
+    COMPLETED,
+
+    FAILED
+
 }
+
+

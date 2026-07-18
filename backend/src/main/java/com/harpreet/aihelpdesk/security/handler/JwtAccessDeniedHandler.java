@@ -1,5 +1,3 @@
-package com.harpreet.aihelpdesk.config;
-
 package com.harpreet.aihelpdesk.security.handler;
 
 import jakarta.servlet.ServletException;

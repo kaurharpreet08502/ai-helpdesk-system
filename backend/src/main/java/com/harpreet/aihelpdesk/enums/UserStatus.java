@@ -1,4 +1,10 @@
 package com.harpreet.aihelpdesk.enums;
 
-public class UserStatus {
+
+public enum UserStatus {
+
+    ACTIVE,
+
+    INACTIVE
+
 }

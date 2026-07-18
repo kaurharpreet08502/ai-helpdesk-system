@@ -1,4 +1,13 @@
 package com.harpreet.aihelpdesk.enums;
 
-public class DocumentStatus {
+public enum DocumentStatus {
+
+    UPLOADING,
+
+    PROCESSING,
+
+    INDEXED,
+
+    FAILED
+
 }

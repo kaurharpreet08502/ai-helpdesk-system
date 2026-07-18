@@ -1,4 +1,13 @@
 package com.harpreet.aihelpdesk.enums;
 
-public class VirusScanStatus {
+public enum VirusScanStatus {
+
+    PENDING,
+
+    CLEAN,
+
+    INFECTED,
+
+    FAILED
+
 }

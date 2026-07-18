@@ -1,4 +1,9 @@
 package com.harpreet.aihelpdesk.enums;
 
-public class AIProvider {
+public enum AIProvider {
+
+    OPENAI,
+
+    OLLAMA
+
 }

@@ -1,4 +1,13 @@
 package com.harpreet.aihelpdesk.enums;
 
-public class TicketPriority {
+public enum TicketPriority {
+
+    LOW,
+
+    MEDIUM,
+
+    HIGH,
+
+    CRITICAL
+
 }

@@ -1,13 +1,12 @@
 package com.harpreet.aihelpdesk.entity;
 
+import com.harpreet.aihelpdesk.enums.Designation;
 import com.harpreet.aihelpdesk.enums.Role;
 import com.harpreet.aihelpdesk.enums.UserStatus;
 
 import jakarta.persistence.*;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -16,7 +15,9 @@ import java.util.List;
 @Getter
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity
+@Builder
 @Table(
         name = "users",
         uniqueConstraints = {
@@ -73,12 +74,12 @@ public class User extends BaseEntity {
             length = 15
     )
     private String phoneNumber;
-
+    @Enumerated(EnumType.STRING)
     @Column(
             nullable = false,
             length = 100
     )
-    private String designation;
+    private Designation designation;
 
     @Enumerated(EnumType.STRING)
     @Column(
@@ -122,5 +123,12 @@ public class User extends BaseEntity {
             nullable = false
     )
     private Boolean accountLocked = false;
+    @Column(nullable = false)
+    @Builder.Default
+    private Boolean enabled = true;
+
+    @Column(nullable = false)
+    @Builder.Default
+    private Boolean locked = false;
 
 }

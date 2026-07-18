@@ -1,4 +1,11 @@
 package com.harpreet.aihelpdesk.enums;
 
-public class CommentType {
+public enum CommentType {
+
+    PUBLIC,
+
+    INTERNAL,
+
+    AI
+
 }
